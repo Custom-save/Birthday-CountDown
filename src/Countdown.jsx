@@ -1,12 +1,12 @@
 import React from 'react';
 import Wish from './Wish';
 
-const Countdown = ({ countdownData, name }) => {
+const Countdown = ({ countdownData, name,year }) => {
   if (!countdownData.isItBday) {
     return (
       <div>
         <h1 className='heading'>
-          Countdown to <span className='highlight'>{name}</span> Birthday
+          Countdown to <span className='highlight'>{name}'s</span> Birthday
         </h1>
         <div className='countdown-wrapper'>
           <div className='countdown-box'>
@@ -29,7 +29,7 @@ const Countdown = ({ countdownData, name }) => {
       </div>
     );
   } else {
-    return <Wish name={name} />;
+    return <Wish name={name} year={year} />;
   }
 };
 

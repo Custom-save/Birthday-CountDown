@@ -13,11 +13,13 @@ const Birthday = ({ name, day, month }) => {
     isItBday: false,
   });
 
+  const year = 2002;
+
   if (name === undefined || day === undefined || month === undefined) {
     // This is if not enough params are provided
     name = 'Your'; // Name of the Person
-    month = 8; // Month of the Birthday
-    day = 2; // Day of the Birthday
+    month = 1; // Month of the Birthday
+    day = 23; // Day of the Birthday
   }
 
   // get current time
@@ -104,11 +106,11 @@ const Birthday = ({ name, day, month }) => {
 
   return (
     <div className='page'>
-      <Countdown countdownData={state} name={name} />
+      <Countdown countdownData={state} year={year} name={name} />
       {!isItBday && (
         <>
           <div className='birthdate'>
-            Birth-Date: {day}/{monthBday} 
+            Birth-Date: {day}/{monthBday}/{year}
             {/* {currentYear} */}
           </div>
           <div className='credits'>

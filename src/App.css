@@ -146,3 +146,68 @@ a {
   margin-top: 20px;
   font-size: 400;
 }
+/* text animation */
+.flip-animation {
+  display: flex;
+  justify-content: center;
+  transform: translate3d(0,0,0);
+}
+
+.flip-animation > span {
+  font-size: 3rem;
+  color: #fff;
+  animation: flipping 2s infinite;
+}
+
+.flip-animation > span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.flip-animation > span:nth-child(2) {
+  margin-left: 10px;
+  animation-delay: 0.4s;
+  color: #7f78d2;
+}
+
+.flip-animation > span:nth-child(3) {
+  animation-delay: 0.6s;
+  color: #7f78d2;
+}
+
+.flip-animation > span:nth-child(4) {
+  animation-delay: 0.8s;
+  color: #7f78d2;
+}
+
+.flip-animation > span:nth-child(5) {
+  animation-delay: 1s;
+  color: #7f78d2;
+}
+
+.flip-animation > span:nth-child(6) {
+  margin-left: 10px;
+  animation-delay: 1.2s;
+  color: #7f78d2;
+}
+.flip-animation > span:nth-child(7) {
+  animation-delay: 1.4s;
+  color: #7f78d2;
+}
+.flip-animation > span:nth-child(8) {
+  animation-delay: 1.6s;
+  color: #7f78d2;
+}
+
+@keyframes flipping {
+  0%, 80% {
+    transform: rotateY(360deg);
+  }
+}
+
+
+
+
+
+
+
+
