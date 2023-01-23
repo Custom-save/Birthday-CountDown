@@ -87,18 +87,18 @@ const Birthday = ({ name, day, month }) => {
 
   let birth = new Date(currentYear, month - 1, day);
   const monthNames = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12',
   ];
   let monthBday = monthNames[birth.getMonth()];
 
@@ -108,14 +108,15 @@ const Birthday = ({ name, day, month }) => {
       {!isItBday && (
         <>
           <div className='birthdate'>
-            Birth-Date: {day} {monthBday} {currentYear}
+            Birth-Date: {day}/{monthBday} 
+            {/* {currentYear} */}
           </div>
           <div className='credits'>
             <a href='https://github.com'>
               <img src={githubLogo} alt='Github-Logo' className='github-logo' />
             </a>
           </div>
-          <Link to='/generate'>Generate Here</Link>
+          {/* <Link to='/generate'>Generate Here</Link> */}
         </>
       )}
     </div>
