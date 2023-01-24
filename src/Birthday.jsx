@@ -86,7 +86,6 @@ const Birthday = ({ name, day, month }) => {
       }
     }, 1000);
   }, [currentYear, day, isItBday, month]);
-
   let birth = new Date(currentYear, month - 1, day);
   const monthNames = [
     '1',
@@ -110,7 +109,7 @@ const Birthday = ({ name, day, month }) => {
       {!isItBday && (
         <>
           <div className='birthdate'>
-            Birth-Date: {day}/{monthBday}/{year}
+            Birth-Date: {day < 10 ? 0 + '' + day : day}/{monthBday < 10 ? 0 + '' + monthBday : monthBday}/{year}
             {/* {currentYear} */}
           </div>
           <div className='credits'>
